@@ -1,3 +1,4 @@
+import 'package:chat_app_ui/src/ui/widgets/dumb/app_logo.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 import 'package:chat_app_ui/src/ui/global/ui_helpers.dart';
@@ -26,10 +27,7 @@ class _StartupViewState extends State<StartupView> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
-                Image.asset(
-                  'assets/images/icons/logo.png',
-                  width: blockSize(context) * 10,
-                ),
+                AppLogo(),
                 SizedBox(
                   height: blockSize(context) * 5,
                 ),

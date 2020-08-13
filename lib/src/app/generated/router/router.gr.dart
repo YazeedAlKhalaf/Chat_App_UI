@@ -9,15 +9,21 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
+import '../../../ui/views/auth/sign_in/sign_in_view.dart';
+import '../../../ui/views/auth/sign_up/sign_up_view.dart';
 import '../../../ui/views/home/home_view.dart';
 import '../../../ui/views/startup/startup_view.dart';
 
 class Routes {
   static const String startupView = '/';
   static const String homeView = '/home-view';
+  static const String signInView = '/sign-in-view';
+  static const String signUpView = '/sign-up-view';
   static const all = <String>{
     startupView,
     homeView,
+    signInView,
+    signUpView,
   };
 }
 
@@ -27,6 +33,8 @@ class Router extends RouterBase {
   final _routes = <RouteDef>[
     RouteDef(Routes.startupView, page: StartupView),
     RouteDef(Routes.homeView, page: HomeView),
+    RouteDef(Routes.signInView, page: SignInView),
+    RouteDef(Routes.signUpView, page: SignUpView),
   ];
   @override
   Map<Type, AutoRouteFactory> get pagesMap => _pagesMap;
@@ -40,6 +48,18 @@ class Router extends RouterBase {
     HomeView: (data) {
       return MaterialPageRoute<dynamic>(
         builder: (context) => HomeView(),
+        settings: data,
+      );
+    },
+    SignInView: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => SignInView(),
+        settings: data,
+      );
+    },
+    SignUpView: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => SignUpView(),
         settings: data,
       );
     },

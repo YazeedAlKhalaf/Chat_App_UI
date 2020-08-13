@@ -12,11 +12,15 @@ class StartupViewModel extends CustomBaseViewModel {
       Duration(
         seconds: 3,
       ),
-      () => navigateToHomeView(),
+      () => navigateToSignInView(),
     );
   }
 
   Future navigateToHomeView() async {
     await _navigationService.pushNamedAndRemoveUntil(Routes.homeView);
+  }
+
+  Future navigateToSignInView() async {
+    await _navigationService.pushNamedAndRemoveUntil(Routes.signInView);
   }
 }
