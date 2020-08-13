@@ -15,4 +15,8 @@ class SignInViewModel extends CustomBaseViewModel {
   Future<void> navigateToSignUpView() async {
     await _navigationService.pushNamedAndRemoveUntil(Routes.signUpView);
   }
+
+  Future<void> navigateToForgotPasswordView() async {
+    await _navigationService.navigateTo(Routes.forgotPasswordView);
+  }
 }

@@ -23,7 +23,7 @@ class LoginOrSignUpWithButton extends StatelessWidget {
       color: socialMediaColor,
       onPressed: () {},
       child: Container(
-        color: socialMediaColor,
+        color: Colors.transparent,
         constraints: BoxConstraints(
           maxWidth: 300.0,
           minHeight: 50.0,

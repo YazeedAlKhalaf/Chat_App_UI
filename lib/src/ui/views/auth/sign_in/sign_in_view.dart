@@ -84,7 +84,9 @@ class SignInView extends StatelessWidget {
                               color: lynchColor,
                               fontWeight: FontWeight.bold,
                             ),
-                            onPressed: () {},
+                            onPressed: () async {
+                              await model.navigateToForgotPasswordView();
+                            },
                           ),
                         ),
                       ],

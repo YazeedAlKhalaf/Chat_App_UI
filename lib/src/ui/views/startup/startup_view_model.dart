@@ -21,6 +21,7 @@ class StartupViewModel extends CustomBaseViewModel {
   }
 
   Future navigateToSignInView() async {
-    await _navigationService.pushNamedAndRemoveUntil(Routes.signInView);
+    await _navigationService.pushNamedAndRemoveUntil(Routes.myMobileNumberView);
+    // await _navigationService.pushNamedAndRemoveUntil(Routes.signInView);
   }
 }
