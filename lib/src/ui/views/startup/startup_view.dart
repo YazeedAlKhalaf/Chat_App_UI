@@ -28,21 +28,19 @@ class _StartupViewState extends State<StartupView> {
               children: <Widget>[
                 Image.asset(
                   'assets/images/icons/logo.png',
-                  width: blockSizeHorizontal(context) * 20,
+                  width: blockSize(context) * 10,
                 ),
                 SizedBox(
-                  height: blockSizeHorizontal(context) * 5,
+                  height: blockSize(context) * 5,
                 ),
                 Text(
                   'Chat with your friends everywhere in the world',
                   style: TextStyle(
-                    fontSize: blockSizeVertical(context) * 1.8,
+                    fontSize: blockSize(context) * 1.5,
                     letterSpacing: 2,
                   ),
                 ),
-                SizedBox(
-                  height: blockSizeHorizontal(context) * 10,
-                ),
+                verticalSpaceMedium(context),
                 CircularProgressIndicator(
                   valueColor: AlwaysStoppedAnimation(primaryColor),
                 ),
