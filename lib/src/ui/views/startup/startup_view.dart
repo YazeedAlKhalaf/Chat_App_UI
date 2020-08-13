@@ -26,12 +26,20 @@ class _StartupViewState extends State<StartupView> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
-                // TODO(yazeed): Put Your Logo Here :)
-                // Image.asset(
-                //   'assets/icons/logo.png',
-                //   width: blockSizeHorizontal(context) * 25,
-                // ),
-            
+                Image.asset(
+                  'assets/images/icons/logo.png',
+                  width: blockSizeHorizontal(context) * 20,
+                ),
+                SizedBox(
+                  height: blockSizeHorizontal(context) * 5,
+                ),
+                Text(
+                  'Chat with your friends everywhere in the world',
+                  style: TextStyle(
+                    fontSize: blockSizeVertical(context) * 1.8,
+                    letterSpacing: 2,
+                  ),
+                ),
                 SizedBox(
                   height: blockSizeHorizontal(context) * 10,
                 ),
